@@ -1,0 +1,66 @@
+/* Estilos generales */
+
+
+header {
+    width: 100%;
+    transition: 0.7s;
+    padding: 30px 20px;
+    z-index: 10;
+}
+
+header.down {
+    background: linear-gradient(to top, #d42479c5, #8b1c97, #5e17a9);
+    padding: 15px 20px;
+}
+
+.navbar-toggler {
+    display: none !important;
+}
+
+.navbar-nav {
+    display: flex !important;
+    flex-direction: row; /* Asegurar alineación horizontal */
+    align-items: center;
+    gap: 15px;
+}
+
+/* Fondo de menú en responsive */
+@media (max-width: 991px) {
+    .navbar-collapse {
+        display: flex !important; /* Asegura que siempre esté visible */
+        background: none; /* Sin fondo en móviles */
+        max-height: none; /* Sin colapso */
+    }
+
+    /* Cuando el menú se expanda, se establece un fondo visible y max-height alto */
+    .navbar-collapse.show {
+        max-height: 800px; /* Un valor alto para garantizar que se expanda completamente */
+        background-color: rgba(0, 0, 0, 0.9); /* Fondo oscuro visible al desplegarse */
+    }
+}
+
+/* Asegurar que los links sean visibles */
+.navbar-nav .nav-link {
+    font-family: Helvetica, sans-serif;
+    font-weight: 600;
+    letter-spacing: 2px;
+    transition: 0.3s;
+    color: white !important;
+    padding: 10px 15px; /* Agregar padding para separar los enlaces del borde */
+}
+
+
+
+
+
+@keyframes rgbAnimation {
+    0% { color: #ffffff; }
+    50% { color: #f81e87; }
+    100% { color: #ffffff; } 
+  }
+  
+  .nav-item i {
+    font-size: 1.5rem; /* Ajusta el tamaño */
+    animation: rgbAnimation 2s infinite linear; /* Duración de 2s, animación infinita */
+  }
+  

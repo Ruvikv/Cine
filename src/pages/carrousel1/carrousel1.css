@@ -1,0 +1,28 @@
+/* Fondo del carrusel */
+.fondo {
+  background: url(/src/images/Fondo3-min.png) center/cover no-repeat;
+}
+
+/* Contenedor del carrusel */
+.carousel-wrapper {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* Estilo del carrusel */
+.carousel-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 1s ease-in-out; /* Esto es para transición suave */
+}
+
+/* Imágenes dentro del carrusel */
+.carousel-image {
+  object-fit: contain;
+  max-height: 500px;
+  width: 100%;
+  margin: 0 auto;
+}

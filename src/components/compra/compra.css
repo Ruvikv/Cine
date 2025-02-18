@@ -1,0 +1,11 @@
+.color-contenedor {
+    background: linear-gradient(to bottom, #d4247961, #8b1c9768, #5e17a96d);
+    border-radius: 10px;
+  }
+
+
+  .recuadro {
+    background-color: #b74bf6cb;
+    color: white;
+    border-radius: 8px;
+  }
