@@ -9,3 +9,10 @@
     color: white;
     border-radius: 8px;
   }
+
+
+  .cuerpo {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }

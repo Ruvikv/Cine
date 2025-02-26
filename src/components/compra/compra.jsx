@@ -43,29 +43,36 @@ const Compra = () => {
     const baseUrl = process.env.REACT_APP_IMAGE_URL;
 
     return (
-    <div>
+    <div className='cuerpo'>
         <div className='text-center pt-5 mt-5 pb-5'>
             <img src={Entradas} alt="" className='img-fluid' style={{ maxWidth: "200px", height: "auto" }}/>
         </div>
 
         <div className='color-contenedor container p-5'>
             {/* logo milenium dentro del contenedor */}
-            <div className='text-center p-3'>
+            <div className='text-center p-2 pb-5'>
                 <img src={Milenium} alt="" />
             </div>
             {/*  IMAGEN Y DETALLES  */}
-            <div className="row align-items-center justify-content-center text-center text-md-start g-3 p-2">
+            <div className="row d-flex justify-content-center align-items-center text-center g-3 p-3">
                 <div className="col-auto mx-auto">
-                    <img src={`${baseUrl}${peliculaImagen}`} alt="" style={{ width: "200px", height: "250px" }} />
+                    <img 
+                        src={`${baseUrl}${peliculaImagen}`} 
+                        alt="" 
+                        style={{ width: "200px", height: "250px" }} 
+                    />
                 </div>
 
-                <div className="col d-flex flex-column align-items-center align-items-md-start ps-md-5 pt-2">
-                    <h5 className="text-white" style={{ wordWrap: "break-word", overflowWrap: "break-word", maxWidth: "200px" }}>
-                    {pelicula}
+                <div className="col d-flex flex-column justify-content-center align-items-center ps-md-3 pt-2">
+                    <h5 
+                        className="text-white"
+                    >
+                        {pelicula}
                     </h5>
-                    <p className="text-white pt-4">{fecha}</p>
+                    <p className="text-white">{fecha}</p>
                 </div>
             </div>
+
         </div>
 
         <form action='' className='container pt-5'>
