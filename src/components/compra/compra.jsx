@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Entradas from '../../images/ticket.png';
 import Milenium from '../../images/Milenium-isotipo.png';
 import Consumibles from '../consumibles/consumibles';
+import DetalleCompra from '../detalleCompra/detalleCompra';
 
 const Compra = () => {
 
@@ -53,25 +54,28 @@ const Compra = () => {
             <div className='text-center p-2 pb-5'>
                 <img src={Milenium} alt="" />
             </div>
+            
             {/*  IMAGEN Y DETALLES  */}
-            <div className="row d-flex justify-content-center align-items-center text-center g-3 p-3">
-                <div className="col-auto mx-auto">
+            <div className="d-flex flex-column flex-md-row justify-content-center align-items-center text-center p-3">
+                {/* Columna para la imagen */}
+                <div className="me-md-4 mb-3 mb-md-0">
                     <img 
                         src={`${baseUrl}${peliculaImagen}`} 
                         alt="" 
-                        style={{ width: "200px", height: "250px" }} 
+                        className="img-fluid" 
+                        style={{ maxWidth: "250px", height: "auto" }} 
                     />
                 </div>
 
-                <div className="col d-flex flex-column justify-content-center align-items-center ps-md-3 pt-2">
-                    <h5 
-                        className="text-white"
-                    >
-                        {pelicula}
-                    </h5>
+                {/* Columna para el texto */}
+                <div className="pt-2">
+                    <h5 className="text-white">{pelicula}</h5>
                     <p className="text-white">{fecha}</p>
                 </div>
             </div>
+
+
+
 
         </div>
 
@@ -124,6 +128,10 @@ const Compra = () => {
 
         <div>
             <Consumibles />
+        </div>
+
+        <div>
+            <DetalleCompra />
         </div>
 
 
