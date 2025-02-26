@@ -84,8 +84,25 @@ const DetalleCompra = () => {
                 <td colSpan="2" className="text-end" style={{ fontSize: '1.25rem', fontWeight: 'bold' }}>
                 Total:
                 </td>
-                <td className="text-end" style={{ fontSize: '1.25rem', fontWeight: 'bold' }}>
+                <td className="text-center" style={{ fontSize: '1.25rem', fontWeight: 'bold' }}>
                 ${total.toLocaleString()}
+                </td>
+            </tr>
+            {/* Fila del Botón */}
+            <tr>
+                <td colSpan="3" className="text-end">
+                <button
+                    className="btn btn-warning"
+                    style={{
+                    width: '200px', 
+                    fontSize: '1rem',
+                    }}
+                >
+                    <i className="fas fa-shopping-cart me-2">
+                    <i className="bi bi-cart-check-fill"></i>
+                    </i>
+                    Generar Pago
+                </button>
                 </td>
             </tr>
             </tbody>

@@ -7,7 +7,7 @@ import './pages/carrousel2/carrousel2.css';
 import './pages/carrousel1/carrousel1.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import Pelicula from './components/detallePelicula/pelicula.jsx';
+import Pelicula from './components/pelicula/pelicula.jsx';
 import Compra from './components/compra/compra.jsx';
 
 
