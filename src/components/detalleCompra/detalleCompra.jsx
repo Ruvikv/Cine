@@ -5,6 +5,7 @@ import Lde from '../../images/menu.png';
 const DetalleCompra = () => {
 
     const [total, setTotal] = useState(0);
+    const [carrito, setCarrito] = useState([]);
 
     const precio1 = 1500.00;
     const precio2 = 7000.00;
@@ -16,8 +17,24 @@ const DetalleCompra = () => {
   
     // Actualizamos el total al cargar el componente
     useEffect(() => {
-      setTotal(calcularTotal());
+      const cargarCarrito = () => {
+        const productoGuardado = JSON.parse(localStorage.getItem('carrito'));
+        if (productoGuardado) {
+          setCarrito(productoGuardado);
+          setTotal(calcularTotal());
+        } else {
+          setCarrito([]);
+        }
+      };
+      // Cargar carrito al inicio
+      cargarCarrito();
+      // Escuchar cambios en localStorage
+      window.addEventListener('storage', cargarCarrito);    
+      return () => {
+        window.removeEventListener('storage', cargarCarrito);
+      };
     }, []);
+    
 
 
     const apikey = process.env.REACT_APP_AUTHORIZATION_API;
@@ -70,15 +87,21 @@ const DetalleCompra = () => {
             </thead>
             <tbody>
             <tr>
-                <td data-column="detalle" className="hora">Cargo por servicio</td>
+                <td data-column="detalle" className="detalle">Cargo por servicio</td>
                 <td data-column="precio" className="detalles"></td>
                 <td data-column="opcion" className="detalles">$1,500.00</td>
             </tr>
             <tr>
-                <td data-column="detalle" className="hora">1 x Entrada de : {pelicula.title}</td>
+                <td data-column="detalle" className="detalle">1 x Entrada de : {pelicula.title}</td>
                 <td data-column="precio" className="detalles">$7,000.00</td>
                 <td data-column="opcion" className="detalles"></td>
             </tr>
+            <tr>
+                <td data-column="detalle" className="detalle">{carrito.nombre}</td>
+                <td data-column="precio" className="detalles">{carrito.precio}</td>
+                <td data-column="opcion" className="detalles"></td>
+            </tr>
+
             {/* Fila del Total */}
             <tr>
                 <td colSpan="2" className="text-end" style={{ fontSize: '1.25rem', fontWeight: 'bold' }}>

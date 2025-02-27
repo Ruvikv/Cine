@@ -6,6 +6,14 @@ import imagen3 from '../../images/compras/47.png';
 import imagen4 from '../../images/compras/48.png';
 
 const consumibles = () => {
+
+  const valueBuy = () => {
+    const nuevoProducto = { id: '4', nombre: 'Combo Fan', precio: '$1,500' };
+    localStorage.setItem('carrito', JSON.stringify(nuevoProducto))
+    window.dispatchEvent(new Event('storage'));
+    alert('Producto agregado al carrito');
+  };
+
   return (
     <div className='pb-5'>
 
@@ -22,7 +30,7 @@ const consumibles = () => {
             <div className="card">
               <img src={imagen1} className="card-img-top" alt="Imagen 1" />
               <div className="card-body text-center">
-                <button className="btn btn-warning w-100 d-flex align-items-center justify-content-center">
+                <button className="btn btn-warning w-100 d-flex align-items-center justify-content-center" onClick={valueBuy}>
                   <i className="fas fa-shopping-cart me-2"><i className="bi bi-cart4"></i></i> Agregar
                 </button>
               </div>
@@ -34,7 +42,7 @@ const consumibles = () => {
             <div className="card">
               <img src={imagen2} className="card-img-top" alt="Imagen 2" />
               <div className="card-body text-center">
-                <button className="btn btn-warning w-100 d-flex align-items-center justify-content-center">
+                <button className="btn btn-warning w-100 d-flex align-items-center justify-content-center" onClick={valueBuy}>
                   <i className="fas fa-shopping-cart me-2"><i className="bi bi-cart4"></i></i> Agregar
                 </button>
               </div>
@@ -46,7 +54,7 @@ const consumibles = () => {
             <div className="card">
               <img src={imagen3} className="card-img-top" alt="Imagen 3" />
               <div className="card-body text-center">
-                <button className="btn btn-warning w-100 d-flex align-items-center justify-content-center">
+                <button className="btn btn-warning w-100 d-flex align-items-center justify-content-center" onClick={valueBuy}>
                   <i className="fas fa-shopping-cart me-2"><i className="bi bi-cart4"></i></i> Agregar
                 </button>
               </div>
@@ -58,7 +66,7 @@ const consumibles = () => {
             <div className="card">
               <img src={imagen4} className="card-img-top" alt="Imagen 4" />
               <div className="card-body text-center">
-                <button className="btn btn-warning w-100 d-flex align-items-center justify-content-center">
+                <button className="btn btn-warning w-100 d-flex align-items-center justify-content-center" onClick={valueBuy}>
                   <i className="fas fa-shopping-cart me-2"><i className="bi bi-cart4"></i></i> Agregar
                 </button>
               </div>
