@@ -1,8 +1,9 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
-import img2 from './imgs/878.png';
-import img3 from './imgs/882.png';
-import img4 from './imgs/884.png';
+import img2 from './imgs/Banner Web.png';
+import img3 from './imgs/Banner-Cinépolis-A---Better-Man.png';
+import img4 from './imgs/BANNER-CINEPOLIS-2048x1024-PEREZ-OSOS.jpg';
+import img5 from './imgs/sl5rXSyMTzK5WkpRO9oVIkqr6DE.jpg'
 
 const Carrousel1 = () => {
   return (
@@ -35,6 +36,18 @@ const Carrousel1 = () => {
         <Carousel.Item>
           <img
             src={img2}
+            className="d-block w-100"
+            alt="Slide 3"
+            style={{
+              objectFit: 'contain',
+              maxHeight: '500px',
+              margin: '0 auto',
+            }}
+          />
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            src={img5}
             className="d-block w-100"
             alt="Slide 3"
             style={{
