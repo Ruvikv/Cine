@@ -15,7 +15,7 @@ const DetalleCompra = () => {
     };
   
     // Actualizamos el total al cargar el componente
-    React.useEffect(() => {
+    useEffect(() => {
       setTotal(calcularTotal());
     }, []);
 
@@ -28,11 +28,11 @@ const DetalleCompra = () => {
         const fetchTrailer = async () => {
           try {
             const options = {
-              method: 'GET',
-              headers: {
+                method: 'GET',
+                headers: {
                 accept: 'application/json',
                 Authorization: `Bearer ${process.env.REACT_APP_AUTHORIZATION_API}`
-              }
+                }
             };
             const response = await fetch(`${process.env.REACT_APP_API_LINK}/3/movie/${movieId}`,options);
             const data = await response.json();
