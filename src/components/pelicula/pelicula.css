@@ -151,3 +151,18 @@ table {
 
 
 
+
+
+
+/* Asegúrate de que la imagen no se haga demasiado grande en pantallas pequeñas */
+.entrada-img {
+  max-width: 100%; /* Asegura que no exceda el tamaño del contenedor */
+  height: auto; /* Mantiene la proporción de la imagen */
+}
+
+/* Si deseas limitar la imagen más en pantallas pequeñas */
+@media (max-width: 767px) {
+  .entrada-img {
+    max-width: 80%; /* Limita la imagen a un 80% del ancho del contenedor en pantallas pequeñas */
+  }
+}

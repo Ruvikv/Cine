@@ -8,6 +8,7 @@ import Lde from '../../images/menu.png';
 import './pelicula.css';
 import { Link, useNavigate } from 'react-router-dom';
 import { CircularProgress } from '@mui/material';
+import Suscripcion from '../suscripcion/suscripcion';
 
 const Pelicula = () => {
 
@@ -130,24 +131,28 @@ const Pelicula = () => {
         </tbody>
       </table>
 
-
     </div>
 
 
 
 
           {/* Columna de la imagen */}
-          <div className="col-6 col-md-3 text-center pt-3">
-            {/* Imagen Entrada */}
-            <img className="img-fluid" src={Entrada} alt="Entrada" />
-            <div className='pt-3'>
-                <div className='container p-3 recuadro'>
-                    <Link className='link-blanco' to="https://www.cinesantarosa.com.ar/assets/img/logos/rs28902.pdf">
-                        <h7>DESCARGUE EL FORMULARIO MENORES RES. 2890</h7>
-                    </Link>
-                </div>
-            </div>
-          </div>
+<div className="col-12 col-md-3 text-center pt-3">
+  {/* Imagen Entrada */}
+  <img className="img-fluid entrada-img" src={Entrada} alt="Entrada" />
+  <div className='pt-3'>
+    <div className='container p-3 recuadro'>
+      <Link className='link-blanco' to="https://www.cinesantarosa.com.ar/assets/img/logos/rs28902.pdf">
+        <h7>DESCARGA FORMULARIO MENORES RES. 2890</h7>
+      </Link>
+    </div>
+    <div className='p-3'>
+      {/* Aseguramos que Suscripción ocupe todo el ancho */}
+      <Suscripcion />
+    </div>
+  </div>
+</div>
+
         </div>
       </div>
     </div>
